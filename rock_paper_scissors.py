@@ -1,32 +1,44 @@
-# rock_paper_scissors.py
-# Basic Rock–Paper–Scissors game
+# Basic Rock–Paper–Scissors game (Updated 3rd November 2025)
 # Author: danielawosoga
-# Description: Player chooses rock, paper, or scissors. Computer randomly selects one and determines the winner.
+
 
 import random
 
-def main():
+def play_game():
     print("Welcome to Rock–Paper–Scissors!")
-    options = ["rock", "paper", "scissors"]
+    
+    # Valid choices
+    choices = ["rock", "paper", "scissors"]
 
-    # Ask for player input
-    player_choice = input("Enter rock, paper, or scissors: ").lower()
-    computer_choice = random.choice(options)
+    while True:
+        # Player input
+        player = input("Enter rock, paper, or scissors: ").lower()
+        
+        # Input validation
+        if player not in choices:
+            print("Invalid input! Please type 'rock', 'paper', or 'scissors'.\n")
+            continue
 
-    print(f"\nYou chose: {player_choice}")
-    print(f"Computer chose: {computer_choice}")
+        # Computer choice
+        computer = random.choice(choices)
+        print(f"You chose: {player}")
+        print(f"Computer chose: {computer}")
 
-    # Determine winner
-    if player_choice == computer_choice:
-        print("It's a tie!")
-    elif (
-        (player_choice == "rock" and computer_choice == "scissors")
-        or (player_choice == "paper" and computer_choice == "rock")
-        or (player_choice == "scissors" and computer_choice == "paper")
-    ):
-        print("You win!")
-    else:
-        print("You lose!")
+        # Game logic
+        if player == computer:
+            print("It's a tie!\n")
+        elif (player == "rock" and computer == "scissors") or \
+             (player == "paper" and computer == "rock") or \
+             (player == "scissors" and computer == "paper"):
+            print("You win!\n")
+        else:
+            print("You lose!\n")
 
-if __name__ == "__main__":
-    main()
+        # Replay option
+        replay = input("Do you want to play again? (yes/no): ").lower()
+        if replay != "yes":
+            print("Thanks for playing! Goodbye 👋")
+            break
+
+# Run the game
+play_game()
