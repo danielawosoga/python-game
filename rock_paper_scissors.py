@@ -1,5 +1,6 @@
-# Basic Rock–Paper–Scissors game (Updated 6th November 2025)
-# Author: danielawosoga
+# I acknowledge the use of ChatGPT (GPT-5, OpenAI, https://chat.openai.com/) to generate the code in this file.
+# Basic Rock–Paper–Scissors game (Updated 9th November 2025)
+
 
 
 import random
@@ -40,7 +41,7 @@ def play_game():
             print("\nFinal Score:")
             print(f"You: {player_score}")
             print(f"Computer: {computer_score}")
-            print("Thanks for playing! Goodbye 👋")
+            print("Thanks for playing! Goodbye!")
             break
 
 play_game()

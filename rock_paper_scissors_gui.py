@@ -1,3 +1,8 @@
+# I acknowledge the use of ChatGPT (GPT-5, OpenAI, https://chat.openai.com/) to generate the code in this file.
+# Basic Rock–Paper–Scissors game (Updated 9th November 2025)
+
+
+
 import tkinter as tk
 import random
 
